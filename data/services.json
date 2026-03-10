@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "klempner",
+    "name": "Klempner",
+    "price_low": 80,
+    "price_medium": 120,
+    "price_high": 160,
+    "price_emergency": 200,
+    "services": [
+      "Rohrreinigung und Verstopfungsbeseitigung",
+      "Leckortung und Rohrreparatur",
+      "Installation von Sanitäreinrichtungen",
+      "Heizungswartung und -reparatur",
+      "Badsanierung und -modernisierung",
+      "Notdienst bei Wasserschäden"
+    ]
+  },
+  {
+    "slug": "elektriker",
+    "name": "Elektriker",
+    "price_low": 70,
+    "price_medium": 110,
+    "price_high": 150,
+    "price_emergency": 180,
+    "services": [
+      "Elektrische Installationen",
+      "Fehlerbehebung und Reparatur",
+      "Lichtplanung und -installation",
+      "Steckdoseninstallation",
+      "LED-Umrüstung",
+      "Notdienst bei Stromausfall"
+    ]
+  },
+  {
+    "slug": "dachdecker",
+    "name": "Dachdecker",
+    "price_low": 75,
+    "price_medium": 115,
+    "price_high": 155,
+    "price_emergency": 190,
+    "services": [
+      "Dachreparatur und -sanierung",
+      "Dachinspection und Wartung",
+      "Dachrinnensetzung und -reinigung",
+      "Flaschenabdichtung",
+      "Notdienst bei Dachschäden"
+    ]
+  },
+  {
+    "slug": "maler",
+    "name": "Maler",
+    "price_low": 45,
+    "price_medium": 75,
+    "price_high": 100,
+    "price_emergency": 130,
+    "services": [
+      "Innenanstrich und -gestaltung",
+      "Fassadengestaltung",
+      "Tapeteninstallation",
+      "Lackierarbeiten",
+      "Raumgestaltung",
+      "Notdienst bei Wasserschäden"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m json.tool:*)",
+      "Bash(python scripts/fetch_cities.py:*)",
+      "Bash(python scripts/generate_pages.py:*)",
+      "Bash(python scripts/generate_sitemap.py:*)",
+      "Bash(python:*)",
+      "WebSearch",
+      "Bash(ls:*)",
+      "Bash(dir output*.html /s /b)",
+      "Bash(powershell -Command:*)",
+      "Bash(bash -c \"git init && git add output/ .gitignore *.bat *.md && git commit -m \"\"Phase 1: Deploy 375 pages\"\"\")",
+      "Bash(bash -c \"git branch -M main && git remote add origin https://github.com/wm/handwerker-ratgeber.git 2>/dev/null || git remote set-url origin https://github.com/wm/handwerker-ratgeber.git && git push -u origin main\")",
+      "Bash(bash -c \"git remote set-url origin https://github.com/w020304m/auto.de.git && git push -u origin main\")",
+      "Bash(tar:*)",
+      "Bash(bash -c \"git add output/googleb0c2f7d197b97184.html .gitignore && git commit -m ''Add Google verification file'' && git push\")",
+      "Bash(curl:*)",
+      "Bash(bash -c \"git add output/robots.txt && git commit -m ''Update sitemap URL in robots.txt'' && git push\")",
+      "Bash(find:*)",
+      "Bash(bash -c \"git add output/ && git commit -m ''Update all URLs to auto-de.pages.dev'' && git push\")",
+      "Bash(git push:*)",
+      "Bash(bash -c \"git add -A && git commit -m ''Fix domain references in scripts and templates'' && git push\")"
+    ]
+  }
+}

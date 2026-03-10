@@ -1,0 +1,81 @@
+{
+  "modifiers": {
+    "": {
+      "name": "main",
+      "title_suffix": "",
+      "focus": "Preise & Notdienst",
+      "faqs": [
+        {
+          "question": "Worauf sollte man bei der Auswahl achten?",
+          "answer": "Achten Sie auf Zertifizierungen, Kundenbewertungen und faire Preise."
+        },
+        {
+          "question": "Sind die Anbieter zertifiziert?",
+          "answer": "Die meisten Anbieter sind Meisterbetriebe mit entsprechender Zertifizierung."
+        },
+        {
+          "question": "Wie lange dauert eine typische Reparatur?",
+          "answer": "Die Dauer hängt von der Art der Leistung ab, meist zwischen 1-4 Stunden."
+        },
+        {
+          "question": "Wie findet man den besten Anbieter?",
+          "answer": "Vergleichen Sie mehrere Angebote, prüfen Sie Referenzen und holen Sie Empfehlungen ein."
+        }
+      ]
+    },
+    "kosten": {
+      "name": "kosten",
+      "title_suffix": " Kosten",
+      "focus": "Was Sie erwarten müssen",
+      "faqs": [
+        {
+          "question": "Was kostet ein Grundservice?",
+          "answer": "Ein Grundservice kostet typischerweise zwischen €70 und €120 pro Stunde."
+        },
+        {
+          "question": "Was kostet ein Notdienst?",
+          "answer": "Ein Notdienst kostet typischerweise zwischen €120 und €200 pro Stunde."
+        },
+        {
+          "question": "Gibt es zusätzliche Kosten?",
+          "answer": "Zusätzliche Kosten können entstehen für Material, Anfahrtswege oder Wochenendzuschläge."
+        },
+        {
+          "question": "Wie wird abgerechnet?",
+          "answer": "Die meisten Anbieter rechnen nach Aufwand ab, manche bieten Pauschalpreise an."
+        },
+        {
+          "question": "Sind die Preise verhandelbar?",
+          "answer": "Bei größeren Aufträgen sind Preise oft verhandelbar. Holen Sie mehrere Angebote ein."
+        }
+      ]
+    },
+    "notdienst": {
+      "name": "notdienst",
+      "title_suffix": " Notdienst",
+      "focus": "24/7 Verfügbar",
+      "faqs": [
+        {
+          "question": "Wie schnell ist ein Notdienst vor Ort?",
+          "answer": "Ein Notdienst ist meist innerhalb von 1-2 Stunden vor Ort, in Innenstädten oft schneller."
+        },
+        {
+          "question": "Gibt es 24/7 Notdienst?",
+          "answer": "Ja, viele Anbieter bieten rund um die Uhr Notdienst an."
+        },
+        {
+          "question": "Was kostet ein Notdienst?",
+          "answer": "Notdienste kosten etwa 20-50% mehr als der normale Preis."
+        },
+        {
+          "question": "Welche Notfälle werden abgedeckt?",
+          "answer": "Typische Notfälle: Wasserschäden, Rohrbrüche, Stromausfall, Türöffnung, Dachschäden."
+        },
+        {
+          "question": "Kann man einen Notdienst vorab buchen?",
+          "answer": "Ja, viele Anbieter bieten die Möglichkeit, Notdienstnummern vorab zu speichern."
+        }
+      ]
+    }
+  }
+}

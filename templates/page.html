@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ service }} {{ city }}",
+      "areaServed": {
+        "@type": "City",
+        "name": "{{ city }}"
+      },
+      "priceRange": "€{{ price_low }}-{{ price_high }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ city }}",
+        "addressRegion": "{{ state }}",
+        "addressCountry": "DE"
+      }{% if lat is not none and lng is not none %},
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ lat }},
+        "longitude": {{ lng }}
+      }{% endif %}
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #667eea;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+        section {
+            margin: 40px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: #495057;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background: #667eea;
+            color: white;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .faq-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+        }
+        .faq-item h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .cities-grid a {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: all 0.3s;
+            border-left: 3px solid #667eea;
+        }
+        .cities-grid a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .disclaimer {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ h1_title }}</h1>
+    </header>
+
+    <main>
+        <!-- 城市信息（真实数据） -->
+        <section class="city-info">
+            <h2>Über {{ city }}</h2>
+            <p>{{ city }} ist eine Stadt in {{ state }} mit <strong>{{ population_formatted }} Einwohnern</strong>.</p>
+            {% if postal_code %}
+            <p>Die Postleitzahl ist {{ postal_code }}.</p>
+            {% endif %}
+        </section>
+
+        <!-- 何时需要服务模块 -->
+        <section class="when-needed">
+            <h2>Wann brauchen Sie einen {{ service }} in {{ city }}?</h2>
+            <p><strong>Typische Situationen, in denen Sie einen {{ service }} benötigen:</strong></p>
+            <ul>
+                <li><strong>Notfälle:</strong> Wasserschäden, Rohrbrüche, Stromausfall oder Dachschäden erfordern sofortige professionelle Hilfe</li>
+                <li><strong>Installationen:</strong> Bei Renovierungen, Neu- oder Umbauten benötigen Sie fachmännische Installationen</li>
+                <li><strong>Wartung:</strong> Regelmäßige Wartung verhindert teure Folgeschäden und erhöht die Lebensdauer Ihrer Anlagen</li>
+                <li><strong>Reparaturen:</strong> Defekte an Rohren, Elektrik oder Dach sollten schnellstmöglich behoben werden</li>
+                <li><strong>Sanierung:</strong> Modernisierung von Bädern, Küchen oder Fassaden erfordert professionelle Handwerker</li>
+                <li><strong>Wintercheck:</strong> Vor der kalten Jahreszeit sollten Heizungen, Dächer und Rohre überprüft werden</li>
+            </ul>
+            <p style="margin-top: 15px;">In {{ city }} sind {{ service }} rund um die Uhr verfügbar, insbesondere für Notfälle außerhalb der Geschäftszeiten.</p>
+        </section>
+
+        <!-- 价格表 -->
+        <section class="pricing">
+            <h2>{{ service }} Preise in {{ city }}</h2>
+            <table>
+                <tr>
+                    <th>Leistung</th>
+                    <th>Preis</th>
+                </tr>
+                <tr>
+                    <td>Grundservice</td>
+                    <td>€{{ price_low }}-{{ price_medium }} pro Stunde</td>
+                </tr>
+                <tr>
+                    <td>Notdienst</td>
+                    <td>€{{ price_high }}-{{ price_emergency }} pro Stunde</td>
+                </tr>
+                {% if modifier == "notdienst" %}
+                <tr>
+                    <td>Wochenend/Zuschlag</td>
+                    <td>+20-30%</td>
+                </tr>
+                {% endif %}
+            </table>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #6c757d;">
+                * Preise sind Richtwerte und können je nach Aufwand variieren
+            </p>
+        </section>
+
+        <!-- 服务区域模块 -->
+        <section class="service-areas">
+            <h2>Servicegebiete in {{ city }}</h2>
+            <p><strong>Unser {{ service }} Service deckt alle Stadtteile von {{ city }} ab:</strong></p>
+            <p>Wir arbeiten in {{ city }} und den umliegenden Gebieten. Egal ob Sie in der Innenstadt, in den Vororten oder in den benachbarten Gemeinden wohnen – unser {{ service }} kommt schnell und zuverlässig zu Ihnen.</p>
+            <p style="margin-top: 15px;"><strong>Warum einen lokalen {{ service }} in {{ city }} wählen?</strong></p>
+            <ul>
+                <li><strong>Schnelle Reaktionszeit:</strong> Lokale {{ service }} sind oft innerhalb von 30-60 Minuten vor Ort</li>
+                <li><strong>Kenntnis vor Ort:</strong> Sie kennen die regionalen Gegebenheiten und örtlichen Bauvorschriften</li>
+                <li><strong>Verfügbarkeit:</strong> 24/7 Notdienst für dringende Reparaturen und Notfälle</li>
+                <li><strong>Erreichbarkeit:</strong> Persönliche Beratung und transparente Preisgestaltung</li>
+                <li><strong>Garantie:</strong> Seriöse Handwerker bieten Gewährleistung auf ihre Arbeiten</li>
+            </ul>
+            <p style="margin-top: 15px;">Kontaktieren Sie uns für eine unverbindliche Anfrage oder einen schnellen Termin in {{ city }}.</p>
+        </section>
+
+        <!-- 服务列表 -->
+        <section class="services">
+            <h2>Typische {{ service }} Leistungen in {{ city }}</h2>
+            <ul>
+                {% for service_item in service_list %}
+                <li>{{ service_item }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- 其他城市内链 -->
+        <section class="other-cities">
+            <h2>{{ service }} in anderen Städten</h2>
+            <div class="cities-grid">
+                {% for city_link in nearby_cities %}
+                <a href="/{{ service_slug }}-{{ city_link['slug'] }}/">{{ city_link['name'] }}</a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- FAQ + FAQPage Schema -->
+        <section class="faq">
+            <h2>Häufige Fragen (FAQ)</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                {% for faq in faqs %}
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">{{ faq.question }}</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <span itemprop="text">{{ faq.answer }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {{ current_year }} Handwerker Ratgeber</p>
+        <p><a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a> | <a href="/">Startseite</a></p>
+        <p class="disclaimer">&amp;#9888; Die Preise sind Richtwerte und können je nach Aufwand und Region variieren.</p>
+    </footer>
+</body>
+</html>
