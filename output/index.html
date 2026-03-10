@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwerker Ratgeber Deutschland - Klempner, Elektriker & Notdienste</title>
+    <meta name="description" content="Finden Sie Klempner, Elektriker, Dachdecker und Maler in Ihrer Stadt. 24/7 Notdienst verfügbar. Preise, Tipps und Empfehlungen.">
+    <link rel="canonical" href="https://handwerker-ratgeber.de/">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: -30px auto 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .service-card a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .service-card a:hover {
+            color: #667eea;
+        }
+        .cities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .cities-list a {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        .cities-list a:hover {
+            background: #667eea;
+            color: white;
+            border-left-color: #764ba2;
+            transform: translateX(5px);
+        }
+        .modifier-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .modifier-links a {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #495057;
+            font-size: 0.85rem;
+        }
+        .modifier-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6c757d;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .hero-icon {
+            text-align: center;
+        }
+        .hero-icon .emoji {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero-icon span {
+            display: block;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Handwerker Ratgeber Deutschland</h1>
+        <p>Finden Sie Klempner, Elektriker & Notdienste in Ihrer Stadt</p>
+        <div class="hero-icons">
+            <div class="hero-icon">
+                <div class="emoji">🔧</div>
+                <span>Klempner</span>
+            </div>
+            <div class="hero-icon">
+                <div class="emoji">⚡</div>
+                <span>Elektriker</span>
+            </div>
+            <div class="hero-icon">
+                <div class="emoji">🏠</div>
+                <span>Dachdecker</span>
+            </div>
+            <div class="hero-icon">
+                <div class="emoji">🎨</div>
+                <span>Maler</span>
+            </div>
+            <div class="hero-icon">
+                <div class="emoji">🚨</div>
+                <span>Notdienst</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Willkommen beim Handwerker Ratgeber</h2>
+            <p>Wir helfen Ihnen, den passenden Handwerker in Ihrer Nähe zu finden. Ob Klempner, Elektriker, Dachdecker oder Maler – hier finden Sie Preise, Tipps und 24/7 Notdienste in Ihrer Stadt.</p>
+        </div>
+
+        <!-- SEO Text Paragraph -->
+        <div class="section" style="margin-top: 40px;">
+            <h2>Warum der Handwerker Ratgeber?</h2>
+            <p><strong>Der Handwerker Ratgeber ist Ihre erste Anlaufstelle für professionelle Handwerkerleistungen in ganz Deutschland.</strong> Wir verstehen, dass es oft schwierig und zeitaufwendig sein kann, den richtigen Fachmann für dringende Reparaturen oder geplante Projekte zu finden. Deshalb haben wir eine umfassende Plattform geschaffen, die vertrauenswürdige Klempner, Elektriker, Dachdecker und Maler in Ihrer Nähe zusammenführt.</p>
+            <p style="margin-top: 15px;">Unsere Datenbank enthält <strong>über 30 deutsche Großstädte</strong> mit aktuellen Informationen zu lokalen Handwerkern. Jede Stadt wird regelmäßig aktualisiert, damit Sie immer auf dem neuesten Stand sind. Besonders in Notsituationen – sei es ein plötzlicher Rohrbruch, ein Stromausfall oder ein undichtes Dach – ist schnelle Hilfe essenziell. Unsere Notdienst-Übersicht zeigt Ihnen, welche Handwerker rund um die Uhr verfügbar sind und worauf Sie bei der Auswahl achten sollten.</p>
+            <p style="margin-top: 15px;"><strong>Transparenz ist unser Anspruch.</strong> Auf unseren Seiten finden Sie detaillierte Preisübersichten, die auf realen Marktdaten basieren. So wissen Sie im Voraus, was Sie erwarten können und können Angebote besser vergleichen. Von der einfachen Reparatur bis zur komplexen Sanierung – hier finden Sie qualifizierte Fachleute mit nachweislicher Expertise.</p>
+            <p style="margin-top: 15px;">Wir arbeiten ständig daran, unser Angebot zu erweitern und zu verbessern. Neue Städte und Dienstleistungen werden regelmäßig hinzugefügt. Haben Sie Fragen oder Anregungen? Wir freuen uns über Ihr Feedback!</p>
+        </div>
+
+        <div class="section">
+            <h2>Unsere Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🔧 Klempner</h3>
+                    <p>Rohrreinigung, Installation und Reparatur</p>
+                    <a href="/klempner-berlin/">Berlin ansehen →</a>
+                </div>
+                <div class="service-card">
+                    <h3>⚡ Elektriker</h3>
+                    <p>Installationen, Reparatur und Notdienst</p>
+                    <a href="/elektriker-berlin/">Berlin ansehen →</a>
+                </div>
+                <div class="service-card">
+                    <h3>🏠 Dachdecker</h3>
+                    <p>Dachreparatur und Sanierung</p>
+                    <a href="/dachdecker-berlin/">Berlin ansehen →</a>
+                </div>
+                <div class="service-card">
+                    <h3>🎨 Maler</h3>
+                    <p>Innenanstrich und Fassadengestaltung</p>
+                    <a href="/maler-berlin/">Berlin ansehen →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏙️ Beliebte Städte</h2>
+            <div class="cities-list">
+                <a href="/klempner-berlin/">Berlin (3.6M)</a>
+                <a href="/klempner-hamburg/">Hamburg (1.8M)</a>
+                <a href="/klempner-muenchen/">München (1.5M)</a>
+                <a href="/klempner-koeln/">Köln (1.1M)</a>
+                <a href="/klempner-frankfurt-am-main/">Frankfurt (753K)</a>
+                <a href="/klempner-stuttgart/">Stuttgart (635K)</a>
+                <a href="/klempner-duesseldorf/">Düsseldorf (619K)</a>
+                <a href="/klempner-leipzig/">Leipzig (588K)</a>
+                <a href="/klempner-dortmund/">Dortmund (587K)</a>
+                <a href="/klempner-essen/">Essen (583K)</a>
+                <a href="/klempner-bremen/">Bremen (569K)</a>
+                <a href="/klempner-dresden/">Dresden (556K)</a>
+                <a href="/klempner-hannover/">Hannover (534K)</a>
+                <a href="/klempner-nuernberg/">Nürnberg (518K)</a>
+                <a href="/klempner-duisburg/">Duisburg (499K)</a>
+                <a href="/elektriker-berlin/">Elektriker Berlin →</a>
+                <a href="/dachdecker-muenchen/">Dachdecker München →</a>
+                <a href="/maler-hamburg/">Maler Hamburg →</a>
+                <a href="/klempner-koeln/">Klempner Köln →</a>
+                <a href="/elektriker-frankfurt-am-main/">Elektriker Frankfurt →</a>
+                <a href="/dachdecker-stuttgart/">Dachdecker Stuttgart →</a>
+                <a href="/maler-duesseldorf/">Maler Düsseldorf →</a>
+                <a href="/klempner-leipzig/">Klempner Leipzig →</a>
+                <a href="/elektriker-dresden/">Elektriker Dresden →</a>
+                <a href="/dachdecker-hannover/">Dachdecker Hannover →</a>
+                <a href="/maler-nuernberg/">Maler Nürnberg →</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔍 Spezielle Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>💰 Preisübersicht</h3>
+                    <p>Kosten und Preise vergleichen</p>
+                    <div class="modifier-links">
+                        <a href="/klempner-berlin-kosten/">Kosten</a>
+                        <a href="/elektriker-muenchen-kosten/">Preise</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>🚨 24/7 Notdienst</h3>
+                    <p>Schnelle Hilfe in Notsituationen</p>
+                    <div class="modifier-links">
+                        <a href="/klempner-berlin-notdienst/">Berlin</a>
+                        <a href="/elektriker-hamburg-notdienst/">Hamburg</a>
+                        <a href="/dachdecker-muenchen-notdienst/">München</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Handwerker Ratgeber. Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="/impressum/">Impressum</a> •
+            <a href="/datenschutz/">Datenschutz</a>
+        </p>
+        <p style="margin-top: 15px; font-size: 0.85rem; color: #999;">
+            ⚠️ Die Preise sind Richtwerte und können je nach Aufwand und Region variieren.
+        </p>
+    </footer>
+</body>
+</html>

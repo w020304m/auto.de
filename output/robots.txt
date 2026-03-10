@@ -1,0 +1,11 @@
+# robots.txt for handwerker-ratgeber.de
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://handwerker-ratgeber.de/sitemap.xml
+
+# Disallow specific files if needed (optional)
+# Disallow: /private/
+# Disallow: /temp/
