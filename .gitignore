@@ -28,3 +28,9 @@ Thumbs.db
 
 # Build cache
 .cache/
+
+# Windows temp files
+新建*
+*.txt~
+Thumbs.db
+desktop.ini
